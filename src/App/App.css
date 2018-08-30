@@ -1,0 +1,127 @@
+.App {
+  padding-top: 2em;
+  max-height: 100%;
+  font-family: 'Noto Serif', serif;
+}
+
+.button-group-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.button-group-label {
+  font-size: 1.3em;
+  margin-bottom: 0.4em;
+  /* align-self: flex-start; */
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.type-button {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  margin: 0.4em;
+  padding: 0.9em;
+  padding-top: 1em;
+  border-radius: 0.4em;
+  cursor: pointer;
+  color: #484848;
+  background-color: white;
+  box-shadow: 2px 2px 2px -2px #b3b3b3;
+}
+
+.type-button .icon {
+  margin-right: 0.7em;
+}
+
+.selected {
+  background-color: #e4e4e4;
+}
+
+.type-button:hover {
+  background-color: #e4e4e4;
+}
+
+.svada-setning {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  max-width: 70%;
+  margin-top: 3em;
+  margin-bottom: 1em;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: 'Noto Serif', serif;
+}
+
+.svada-word {
+  font-size: 3em;
+  color: #484848;
+  margin-left: 0.15em;
+  margin-right: 0.15em;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+}
+
+.svada-word:hover {
+  color: #a4a4a4;
+}
+
+.svada-word-selected {
+  color: #a4a4a4;
+}
+
+.not-assigned-word {
+  width: 5em;
+  height: 1em;
+  border-bottom: 1px solid #484848;
+}
+
+.dot {
+  height: 0.4em;
+  width: 0.4em;
+  background-color: #484848;
+  border-radius: 50%;
+}
+
+.lists {
+  display: flex;
+  flex-direction: row;
+}
+
+.word-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  margin: 1em auto;
+}
+
+.word {
+  font-size: 15pt;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 0.5em;
+  background-color: white;
+  margin: 0.3em;
+  border-radius: 0.4em;
+  color: #484848;
+  box-shadow: 2px 2px 2px -2px #b3b3b3;
+}
+
+.word:hover {
+  background-color: #e4e4e4;
+}
