@@ -3,33 +3,30 @@ import { connect } from "react-redux";
 import Word from "../components/Word";
 import { selectWord } from "../reducers/view";
 
-const WordList = ({
-  words,
-  locationInSentence,
-  selectedWordIndex,
-  selectWord,
-  visible,
-  style
-}) =>
-  visible ? (
-    <div className="word-list" style={style}>
-      {words.map((word, index) => (
+const WordList = ({ words, selectedWordIndex, selectWord }) =>
+  words ? (
+    <div className="word-list">
+      {words.map((word, indexInList) => (
         <Word
-          key={word + index}
+          key={word + indexInList}
           word={word}
-          selected={index === selectedWordIndex}
-          onClick={() => selectWord(word, index, locationInSentence)}
+          selected={indexInList === selectedWordIndex}
+          onClick={() => selectWord(word, indexInList)}
         />
       ))}
     </div>
   ) : null;
 
 const mapDispatchToProps = dispatch => ({
-  selectWord: (word, index, locationInSentence) =>
-    dispatch(selectWord(word, index, locationInSentence))
+  selectWord: (word, indexInList) => dispatch(selectWord(word, indexInList))
+});
+
+const mapStateToProps = state => ({
+  words: state.svada[state.view.selectedType][state.view.currentLocation],
+  selectedWordIndex: state.view.selectedWordIndices[state.view.currentLocation]
 });
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(WordList);

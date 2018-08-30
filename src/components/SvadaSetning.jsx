@@ -1,44 +1,30 @@
-import React, { Component } from "react";
+import React from "react";
 import { connect } from "react-redux";
-import { clickWordInSentence, setSvadaWordCoordinates } from "../reducers/view";
+import { clickWordInSentence } from "../reducers/view";
 import SvadaWord from "./SvadaWord";
 
-class SvadaSetning extends Component {
-  constructor(props) {
-    super(props);
-    this.ref = React.createRef();
-  }
+const SvadaSetning = ({ setning, currentLocation, clickWordInSentence }) => {
+  const svadaSetning = setning.map((word, index) => (
+    <SvadaWord
+      key={word + index}
+      word={word}
+      index={index}
+      currentLocation={currentLocation}
+      selected={currentLocation === index}
+      onClick={() => clickWordInSentence(index)}
+    />
+  ));
 
-  componentDidMount() {
-    this.props.setSvadaWordCoordinates(0, this.ref.current.offsetLeft);
-  }
-
-  render() {
-    const { setning, clickWordInSentence, currentLocation } = this.props;
-    const svadaSetning = setning.map((word, index) => (
-      <SvadaWord
-        key={word + index}
-        word={word}
-        index={index}
-        currentLocation={currentLocation}
-        selected={currentLocation === index}
-        onClick={() => clickWordInSentence(index)}
-      />
-    ));
-
-    return (
-      <div ref={this.ref} className="svada-setning">
-        {svadaSetning}
-        <div className="dot" />
-      </div>
-    );
-  }
-}
+  return (
+    <div className="svada-setning">
+      {svadaSetning}
+      <div className="dot" />
+    </div>
+  );
+};
 
 const mapDispatchToProps = dispatch => ({
-  clickWordInSentence: wordIndex => dispatch(clickWordInSentence(wordIndex)),
-  setSvadaWordCoordinates: (offsetWidth, offsetLeft) =>
-    dispatch(setSvadaWordCoordinates(offsetWidth, offsetLeft))
+  clickWordInSentence: wordIndex => dispatch(clickWordInSentence(wordIndex))
 });
 
 const mapStateToProps = state => ({

@@ -7,7 +7,7 @@ const Button = ({ text, selected, iconName, onClick }) => (
     onClick={onClick}
   >
     <FontAwesomeIcon className="icon" icon={iconName} />
-    {text[0].toUpperCase() + text.slice(1)}
+    {text}
   </div>
 );
 
