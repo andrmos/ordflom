@@ -83,6 +83,7 @@
   color: #484848;
   background-color: white;
   box-shadow: 2px 2px 2px -2px #b3b3b3;
+  user-select: none;
 }
 
 .type-button .icon {
@@ -158,6 +159,7 @@
   border-radius: 0.4em;
   color: #484848;
   box-shadow: 2px 2px 2px -2px #b3b3b3;
+  user-select: none;
 }
 
 .word:hover {
