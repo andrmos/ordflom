@@ -1,21 +1,34 @@
-import React from "react";
+import React, { Component } from "react";
 import Button from "./Button";
 import { connect } from "react-redux";
 import { resetSentence } from "../reducers/view";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
-const FinishedButtons = ({ sentenceToCopty, resetSentence }) => (
-  <div>
-    <Button text="Ny" onClick={() => resetSentence()} />
-    {sentenceToCopty}
-    <CopyToClipboard
-      text={sentenceToCopty}
-      // todo: onCopy={() => this.setState({ copied: true })}
-    >
-      <Button text="Kopier" />
-    </CopyToClipboard>
-  </div>
-);
+class FinishedButtons extends Component {
+  state = {
+    copiedText: "Kopier til utklippstavle"
+  };
+
+  render() {
+    const { sentenceToCopty, resetSentence } = this.props;
+    return (
+      <div>
+        <Button text="Lag ny setning" onClick={() => resetSentence()} />
+        <CopyToClipboard
+          text={sentenceToCopty}
+          onCopy={() =>
+            setTimeout(
+              () => this.setState({ copiedText: "Setningen er kopiert!" }),
+              400
+            )
+          }
+        >
+          <Button text={this.state.copiedText} />
+        </CopyToClipboard>
+      </div>
+    );
+  }
+}
 
 const mapStateToProps = state => ({
   sentenceToCopty: state.view.setning.join(" ") + "."
