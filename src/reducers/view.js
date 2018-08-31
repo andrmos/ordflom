@@ -41,11 +41,15 @@ const viewReducer = (state = initialState, action) => {
       let newSetning = [...state.setning];
       newSetning[state.currentLocation] = action.word;
 
+      let newCurrentLocation = newSelectedWordIndices.findIndex(
+        index => index === -1
+      );
+
       return {
         ...state,
         selectedWordIndices: newSelectedWordIndices,
         setning: newSetning,
-        currentLocation: state.currentLocation + 1
+        currentLocation: newCurrentLocation === -1 ? 7 : newCurrentLocation
       };
 
     case TYPE_UPDATED:
