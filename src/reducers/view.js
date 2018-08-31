@@ -32,6 +32,13 @@ const initialState = {
   currentLocation: 0
 };
 
+const nextCurrentLocationOr7 = newSelectedWordIndices => {
+  let newCurrentLocation = newSelectedWordIndices.findIndex(
+    index => index === -1
+  );
+  return newCurrentLocation === -1 ? 7 : newCurrentLocation;
+};
+
 const viewReducer = (state = initialState, action) => {
   switch (action.type) {
     case WORD_SELECTED:
@@ -45,7 +52,7 @@ const viewReducer = (state = initialState, action) => {
         ...state,
         selectedWordIndices: newSelectedWordIndices,
         setning: newSetning,
-        currentLocation: state.currentLocation + 1
+        currentLocation: nextCurrentLocationOr7(newSelectedWordIndices)
       };
 
     case TYPE_UPDATED:
