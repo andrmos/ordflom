@@ -1,6 +1,7 @@
 export const WORD_SELECTED = "WORD_SELECTED";
 export const TYPE_UPDATED = "TYPE_UPDATED";
 export const WORD_IN_SENTENCE_CLICKED = "WORD_IN_SENTENCE_CLICKED";
+export const SENTENCE_RESET = "SENTENCE_RESET";
 
 export const selectWord = (word, index) => ({
   type: WORD_SELECTED,
@@ -18,6 +19,10 @@ export const updateType = newType => {
 export const clickWordInSentence = wordIndex => ({
   type: WORD_IN_SENTENCE_CLICKED,
   wordIndex
+});
+
+export const resetSentence = () => ({
+  type: SENTENCE_RESET
 });
 
 const initialState = {
@@ -53,6 +58,12 @@ const viewReducer = (state = initialState, action) => {
       return {
         ...state,
         currentLocation: action.wordIndex
+      };
+
+    case SENTENCE_RESET:
+      return {
+        ...initialState,
+        currentType: state.selectedType
       };
 
     default:
