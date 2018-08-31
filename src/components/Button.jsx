@@ -6,7 +6,7 @@ const Button = ({ text, selected, iconName, onClick }) => (
     className={selected ? "type-button selected" : "type-button"}
     onClick={onClick}
   >
-    <FontAwesomeIcon className="icon" icon={iconName} />
+    {iconName ? <FontAwesomeIcon className="icon" icon={iconName} /> : null}
     {text}
   </div>
 );
