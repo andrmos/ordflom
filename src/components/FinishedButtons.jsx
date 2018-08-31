@@ -12,7 +12,7 @@ class FinishedButtons extends Component {
   render() {
     const { sentenceToCopty, resetSentence } = this.props;
     return (
-      <div>
+      <div className="finished-buttons">
         <Button text="Lag ny setning" onClick={() => resetSentence()} />
         <CopyToClipboard
           text={sentenceToCopty}

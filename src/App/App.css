@@ -163,3 +163,10 @@
 .word:hover {
   background-color: #e4e4e4;
 }
+
+.finished-buttons {
+  display: flex;
+  max-width: 40%;
+  justify-content: center;
+  margin: 0 auto;
+}
