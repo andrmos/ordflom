@@ -10,6 +10,7 @@
     "npm": "^6.4.0",
     "papaparse": "^4.6.0",
     "react": "^16.4.2",
+    "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.4.2",
     "react-fontawesome": "^1.6.1",
     "react-redux": "^5.0.7",

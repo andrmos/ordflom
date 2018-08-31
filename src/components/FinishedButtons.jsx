@@ -2,23 +2,30 @@ import React from "react";
 import Button from "./Button";
 import { connect } from "react-redux";
 import { resetSentence } from "../reducers/view";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
-const FinishedButtons = ({ resetSentence }) => (
+const FinishedButtons = ({ sentenceToCopty, resetSentence }) => (
   <div>
     <Button text="Ny" onClick={() => resetSentence()} />
-    <Button
-      text="Send til en bekjent"
-      onClick={() => console.log("send til bekjent")}
-    />
-    <Button text="Kopier" onClick={() => console.log("kopier")} />
+    {sentenceToCopty}
+    <CopyToClipboard
+      text={sentenceToCopty}
+      // todo: onCopy={() => this.setState({ copied: true })}
+    >
+      <Button text="Kopier" />
+    </CopyToClipboard>
   </div>
 );
+
+const mapStateToProps = state => ({
+  sentenceToCopty: state.view.setning.join(" ") + "."
+});
 
 const mapDispatchToProps = dispatch => ({
   resetSentence: () => dispatch(resetSentence())
 });
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(FinishedButtons);
