@@ -134,6 +134,10 @@
   border-bottom: 1px solid #484848;
 }
 
+.not-assigned-word-selected {
+  border-bottom: 2px solid #484848;
+}
+
 .dot {
   height: 0.4em;
   width: 0.4em;
