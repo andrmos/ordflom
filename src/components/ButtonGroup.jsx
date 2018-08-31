@@ -41,7 +41,7 @@ const ButtonGroup = ({ types, selectedType, updateType }) => {
   ));
   return (
     <div className="button-group-container">
-      <div className="button-group-label">Type svada</div>
+      {/* <div className="button-group-label">Type svada</div> */}
       <div className="button-group">{typeButtons}</div>
     </div>
   );
