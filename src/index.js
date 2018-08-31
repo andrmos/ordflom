@@ -5,9 +5,11 @@ import { Provider } from "react-redux";
 import "./index.css";
 import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import reducers from "./reducers";
 import { setSvada } from "./reducers/svada";
 import { loadSvada } from "./utils/svadaLoader";
+import Homepage from "./components/Homepage";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -18,10 +20,10 @@ import {
   faArchive,
   faBuilding,
   faGraduationCap,
-  faBriefcaseMedical,
   faHandsHelping,
   faCommentDots,
-  faCarCrash
+  faCarCrash,
+  faTrademark
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -32,10 +34,10 @@ library.add(
   faArchive,
   faBuilding,
   faGraduationCap,
-  faBriefcaseMedical,
   faHandsHelping,
   faCommentDots,
-  faCarCrash
+  faCarCrash,
+  faTrademark
 );
 
 const store = createStore(
@@ -50,7 +52,12 @@ loadSvada(svada => {
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Homepage} />
+        <Route path="/ny-setning" component={App} />
+      </Switch>
+    </Router>
   </Provider>,
   document.getElementById("root")
 );
