@@ -18,7 +18,7 @@ const SvadaSetning = ({ setning, currentLocation, clickWordInSentence }) => {
   return (
     <div className="svada-setning">
       {svadaSetning}
-      <div className="dot" />
+      {setning[6] !== "" ? <div className="dot" /> : null}
     </div>
   );
 };
