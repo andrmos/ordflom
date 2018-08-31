@@ -17,7 +17,7 @@ const App = ({ sentenceComplete }) => (
 );
 
 const mapStateToProps = state => ({
-  sentenceComplete: state.view.selectedWordIndices.every(index => index !== -1)
+  sentenceComplete: state.view.currentLocation > 6
 });
 
 export default connect(mapStateToProps)(App);
