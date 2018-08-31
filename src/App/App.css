@@ -1,4 +1,6 @@
 .App {
+  display: flex;
+  flex-direction: column;
   padding-top: 2em;
   max-height: 100%;
 }
@@ -96,6 +98,11 @@
 
 .type-button:hover {
   background-color: #e4e4e4;
+}
+
+.svada-setning-container {
+  max-height: 20em;
+  min-height: 20em;
 }
 
 .svada-setning {
