@@ -7,17 +7,17 @@ import SvadaSetning from "../components/SvadaSetning";
 import ButtonGroup from "../components/ButtonGroup";
 import FinishedButtons from "../components/FinishedButtons";
 
-const App = ({ sentenceComplete }) => (
+const App = ({ showFinishedButtons }) => (
   <div className="App">
     <ButtonGroup />
     <SvadaSetning />
     <WordList />
-    {sentenceComplete ? <FinishedButtons /> : null}
+    {showFinishedButtons ? <FinishedButtons /> : null}
   </div>
 );
 
 const mapStateToProps = state => ({
-  sentenceComplete: state.view.currentLocation > 6
+  showFinishedButtons: state.view.currentLocation > 6
 });
 
 export default connect(mapStateToProps)(App);
