@@ -24,7 +24,6 @@ const initialState = {
   selectedType: "generell",
   selectedWordIndices: [-1, -1, -1, -1, -1, -1, -1],
   setning: ["", "", "", "", "", "", ""],
-  displayableSetning: "",
   currentLocation: 0
 };
 
