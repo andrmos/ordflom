@@ -1,16 +1,23 @@
 import React from "react";
-import "./App.css";
+import { connect } from "react-redux";
 
+import "./App.css";
 import WordList from "../components/WordList";
 import SvadaSetning from "../components/SvadaSetning";
 import ButtonGroup from "../components/ButtonGroup";
+import FinishedButtons from "../components/FinishedButtons";
 
-const App = () => (
+const App = ({ sentenceComplete }) => (
   <div className="App">
     <ButtonGroup />
     <SvadaSetning />
     <WordList />
+    {sentenceComplete ? <FinishedButtons /> : null}
   </div>
 );
 
-export default App;
+const mapStateToProps = state => ({
+  sentenceComplete: state.view.selectedWordIndices.every(index => index !== -1)
+});
+
+export default connect(mapStateToProps)(App);
