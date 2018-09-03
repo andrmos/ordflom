@@ -1,0 +1,24 @@
+.word-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  margin: 1em auto;
+}
+
+.word {
+  font-size: 1.1em;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 0.5em;
+  background-color: white;
+  margin: 0.3em;
+  border-radius: 0.4em;
+  color: #484848;
+  box-shadow: 2px 2px 2px -2px #b3b3b3;
+  user-select: none;
+}
+
+.word:hover {
+  background-color: #e4e4e4;
+}

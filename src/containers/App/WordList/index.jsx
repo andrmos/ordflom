@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { selectWord } from "../../../reducers/view";
 
+import "./WordList.css";
 import Word from "./Word";
 
 const WordList = ({ words, selectedWordIndex, selectWord }) =>
