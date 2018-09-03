@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import registerServiceWorker from "./registerServiceWorker";
+import registerServiceWorker from "./utils/registerServiceWorker";
 
 import reducers from "./reducers";
 import { setSvada } from "./reducers/svada";
