@@ -54,24 +54,6 @@
   background-color: #e4e4e4;
 }
 
-.svada-setning-container {
-  max-height: 20em;
-  min-height: 20em;
-}
-
-.svada-setning {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: baseline;
-  max-width: 70%;
-  margin-top: 3em;
-  margin-bottom: 3em;
-  margin-right: auto;
-  margin-left: auto;
-}
-
 .svada-word {
   font-size: 2.5em;
   color: #484848;
