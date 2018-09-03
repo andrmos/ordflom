@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import Button from "./Button";
 import { connect } from "react-redux";
-import { resetSentence } from "../reducers/view";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import { resetSentence } from "../../reducers/view";
+
+import Button from "./../../components/Button";
 
 class FinishedButtons extends Component {
   state = {

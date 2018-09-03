@@ -5,7 +5,7 @@ import "./App.css";
 import WordList from "../../components/WordList";
 import SvadaSetning from "../../components/SvadaSetning";
 import ButtonGroup from "../../components/ButtonGroup";
-import FinishedButtons from "../../components/FinishedButtons";
+import FinishedButtons from "./FinishedButtons";
 
 const App = ({ showFinishedButtons }) => (
   <div className="App">
