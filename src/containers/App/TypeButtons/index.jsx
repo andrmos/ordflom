@@ -1,8 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-import { updateType } from "../../reducers/view";
+import { updateType } from "../../../reducers/view";
 
-import Button from "../../components/Button";
+import "./TypeButtons.css";
+import Button from "../../../components/Button";
 
 const iconReference = {
   generell: "comment-dots",
