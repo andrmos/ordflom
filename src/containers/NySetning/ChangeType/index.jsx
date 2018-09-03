@@ -67,7 +67,10 @@ class ChangeType extends Component {
         </div>
 
         {this.state.displayTypes ? (
-          <div className={this.state.displayTypes ? "modal" : "modal hide"}>
+          <div
+            onClick={() => this.setState({ displayTypes: false })}
+            className={this.state.displayTypes ? "modal" : "modal hide"}
+          >
             <div className="modal-content">{typeButtons}</div>
           </div>
         ) : null}
