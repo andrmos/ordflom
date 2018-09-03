@@ -1,7 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-import { updateType } from "../reducers/view";
-import Button from "./Button";
+import { updateType } from "../../../reducers/view";
+
+import "./TypeButtons.css";
+import Button from "../../../components/Button";
 
 const iconReference = {
   generell: "comment-dots",
@@ -39,6 +41,7 @@ const ButtonGroup = ({ types, selectedType, updateType }) => {
       iconName={iconReference[type]}
     />
   ));
+
   return (
     <div className="button-group-container">
       <div className="button-group">{typeButtons}</div>

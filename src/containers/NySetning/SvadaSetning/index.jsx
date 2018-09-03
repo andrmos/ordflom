@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import { clickWordInSentence } from "../reducers/view";
+import { clickWordInSentence } from "../../../reducers/view";
+
+import "./SvadaSetning.css";
 import SvadaWord from "./SvadaWord";
 
 const SvadaSetning = ({ setning, currentLocation, clickWordInSentence }) => {

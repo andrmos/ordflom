@@ -1,0 +1,51 @@
+.svada-setning-container {
+  max-height: 20em;
+  min-height: 20em;
+}
+
+.svada-setning {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  max-width: 70%;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.svada-word {
+  font-size: 2.5em;
+  color: #484848;
+  margin-left: 0.15em;
+  margin-right: 0.15em;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+}
+
+.svada-word:hover {
+  color: #a4a4a4;
+}
+
+.svada-word-selected {
+  color: #a4a4a4;
+}
+
+.not-assigned-word {
+  width: 7em;
+  height: 1em;
+  border-bottom: 1px solid #484848;
+}
+
+.not-assigned-word-selected {
+  border-bottom: 2px solid #484848;
+}
+
+.dot {
+  height: 0.4em;
+  width: 0.4em;
+  background-color: #484848;
+  border-radius: 50%;
+}
