@@ -2,10 +2,10 @@ import React from "react";
 import { connect } from "react-redux";
 
 import "./App.css";
-import WordList from "../../components/WordList";
+import WordList from "./WordList";
+import FinishedButtons from "./FinishedButtons";
 import SvadaSetning from "../../components/SvadaSetning";
 import ButtonGroup from "../../components/ButtonGroup";
-import FinishedButtons from "./FinishedButtons";
 
 const App = ({ showFinishedButtons }) => (
   <div className="App">

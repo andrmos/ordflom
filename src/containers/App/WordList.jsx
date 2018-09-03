@@ -1,7 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import Word from "../components/Word";
-import { selectWord } from "../reducers/view";
+import { selectWord } from "../../reducers/view";
+
+import Word from "../../components/Word";
 
 const WordList = ({ words, selectedWordIndex, selectWord }) =>
   words ? (
