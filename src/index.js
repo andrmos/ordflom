@@ -9,7 +9,7 @@ import reducers from "./reducers";
 import { setSvada } from "./reducers/svada";
 import { loadSvada } from "./utils/svadaLoader";
 
-import App from "./containers/App";
+import NySetning from "./containers/NySetning";
 import Homepage from "./containers/Homepage";
 import "./index.css";
 
@@ -57,7 +57,7 @@ ReactDOM.render(
     <Router>
       <Switch>
         <Route exact path="/" component={Homepage} />
-        <Route path="/ny-setning" component={App} />
+        <Route path="/ny-setning" component={NySetning} />
       </Switch>
     </Router>
   </Provider>,

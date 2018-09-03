@@ -1,14 +1,14 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import "./App.css";
+import "./NySetning.css";
 import WordList from "./WordList";
 import FinishedButtons from "./FinishedButtons";
 import SvadaSetning from "./SvadaSetning";
 import TypeButtons from "./TypeButtons";
 
-const App = ({ showFinishedButtons }) => (
-  <div className="App">
+const NySetning = ({ showFinishedButtons }) => (
+  <div className="ny-setning">
     <TypeButtons />
     <SvadaSetning />
     <WordList />
@@ -20,4 +20,4 @@ const mapStateToProps = state => ({
   showFinishedButtons: state.view.currentLocation > 6
 });
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps)(NySetning);
