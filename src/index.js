@@ -10,7 +10,7 @@ import { setSvada } from "./reducers/svada";
 import { loadSvada } from "./utils/svadaLoader";
 
 import App from "./containers/App";
-import Homepage from "./components/Homepage";
+import Homepage from "./containers/Homepage";
 import "./index.css";
 
 import { library } from "@fortawesome/fontawesome-svg-core";

@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import Button from "./Button";
+import Button from "../../components/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { updateType } from "../reducers/view";
+import { updateType } from "../../reducers/view";
 import { withRouter } from "react-router";
 
 const iconReference = {
