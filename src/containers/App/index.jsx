@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import "./App.css";
 import WordList from "./WordList";
 import FinishedButtons from "./FinishedButtons";
-import SvadaSetning from "../../components/SvadaSetning";
+import SvadaSetning from "./SvadaSetning";
 import ButtonGroup from "../../components/ButtonGroup";
 
 const App = ({ showFinishedButtons }) => (
