@@ -3,6 +3,5 @@ html, body {
   padding: 0;
   font-family: 'Noto Serif', serif;
   height: 100%;
-  background-color: #f7f7f7;
-  background: url("http://api.thumbr.it/whitenoise-361x370.png?background=f7f7f7ff&noise=bdbdbd&density=27&opacity=8");
+  background-color: #f6f6f6;
 }
