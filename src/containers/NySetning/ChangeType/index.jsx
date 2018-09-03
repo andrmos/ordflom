@@ -36,14 +36,19 @@ class ChangeType extends Component {
     displayTypes: false
   };
 
+  clickTypeButton = type => {
+    this.props.updateType(type);
+    this.setState({ displayTypes: false });
+  };
+
   render() {
-    const { types, selectedType, updateType } = this.props;
+    const { types, selectedType } = this.props;
     const typeButtons = types.map(type => (
       <Button
         key={type}
         text={displayText[type]}
         selected={selectedType === type}
-        onClick={() => updateType(type)}
+        onClick={() => this.clickTypeButton(type)}
         iconName={iconReference[type]}
       />
     ));
