@@ -55,13 +55,21 @@ class ChangeType extends Component {
 
     return (
       <div>
-        <div onClick={() => this.setState({ displayTypes: true })}>
+        <div
+          className="change-type-button"
+          onClick={() =>
+            this.setState(prev => ({ displayTypes: !prev.displayTypes }))
+          }
+        >
           <div className="button-line" />
           <div className="button-line" />
           <div className="button-line" />
         </div>
 
-        {this.state.displayTypes ? typeButtons : null}
+        {this.state.displayTypes
+          ? typeButtons
+          : // TODO: Show current selected type
+            null}
       </div>
     );
   }
