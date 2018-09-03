@@ -1,6 +1,5 @@
 .ny-setning {
   display: flex;
   flex-direction: column;
-  padding-top: 2em;
   max-height: 100%;
 }
