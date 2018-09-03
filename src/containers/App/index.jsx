@@ -5,11 +5,11 @@ import "./App.css";
 import WordList from "./WordList";
 import FinishedButtons from "./FinishedButtons";
 import SvadaSetning from "./SvadaSetning";
-import ButtonGroup from "../../components/ButtonGroup";
+import TypeButtons from "./TypeButtons";
 
 const App = ({ showFinishedButtons }) => (
   <div className="App">
-    <ButtonGroup />
+    <TypeButtons />
     <SvadaSetning />
     <WordList />
     {showFinishedButtons ? <FinishedButtons /> : null}
