@@ -54,7 +54,7 @@ class ChangeType extends Component {
     ));
 
     return (
-      <div>
+      <div className="container">
         <div
           className="change-type-button"
           onClick={() =>
@@ -66,10 +66,12 @@ class ChangeType extends Component {
           <div className="button-line" />
         </div>
 
-        {this.state.displayTypes
-          ? typeButtons
-          : // TODO: Show current selected type
-            null}
+        {this.state.displayTypes ? (
+          <div className={this.state.displayTypes ? "modal" : "modal hide"}>
+            <div className="modal-content">{typeButtons}</div>
+          </div>
+        ) : null}
+        {/* // TODO: Show current selected type */}
       </div>
     );
   }
