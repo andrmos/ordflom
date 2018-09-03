@@ -4,15 +4,16 @@
 }
 
 .change-type-button {
+  position: absolute;
   height: 3em;
   width: 3.5em;
-  margin: 1em;
+  margin: 2em;
   cursor: pointer;
 }
 
 .button-line {
   background-color: #484848;
-  height: 0.3em;
+  height: 0.2em;
   margin: 0.5em;
 }
 
