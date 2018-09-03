@@ -1,0 +1,28 @@
+.type-button {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  margin: 0.4em;
+  padding: 0.9em;
+  padding-top: 1em;
+  border-radius: 0.4em;
+  cursor: pointer;
+  color: #484848;
+  background-color: white;
+  box-shadow: 2px 2px 2px -2px #b3b3b3;
+  user-select: none;
+}
+
+.type-button .icon {
+  margin-right: 0.7em;
+}
+
+.selected {
+  background-color: #e4e4e4;
+}
+
+.type-button:hover {
+  background-color: #e4e4e4;
+}
