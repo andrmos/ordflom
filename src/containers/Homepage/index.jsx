@@ -1,9 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
-import Button from "../../components/Button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { updateType } from "../../reducers/view";
 import { withRouter } from "react-router";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import "./Homepage.css";
+import Button from "../../components/Button";
 
 const iconReference = {
   generell: "comment-dots",
@@ -44,6 +46,7 @@ const Homepage = ({ types, updateType, history }) => {
       iconName={iconReference[type]}
     />
   ));
+
   return (
     <div className="homepage">
       <div className="header-container">
