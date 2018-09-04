@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./Homepage.css";
 import Button from "../../components/Button";
+import GithubLink from "../../components/GithubLink";
 
 const iconReference = {
   generell: "comment-dots",
@@ -62,6 +63,7 @@ const Homepage = ({ types, updateType, history }) => {
         Velg setningstype for å komme i gang. Lykke til!
       </div>
       <div className="home-page-button-group">{typeButtons}</div>
+      <GithubLink />
     </div>
   );
 };

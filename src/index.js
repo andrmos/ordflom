@@ -27,6 +27,7 @@ import {
   faCarCrash,
   faTrademark
 } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 library.add(
   faFighterJet,
@@ -39,7 +40,8 @@ library.add(
   faHandsHelping,
   faCommentDots,
   faCarCrash,
-  faTrademark
+  faTrademark,
+  faGithub
 );
 
 const store = createStore(
