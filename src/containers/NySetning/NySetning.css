@@ -7,13 +7,18 @@
 .ny-setning .header-container {
   display: flex;
   justify-content: space-between;
-
 }
 
 .ny-setning .title-container {
   display: flex;
   flex-direction: row;
   font-size: 0.7em;
+  cursor: pointer;
+}
+
+
+.ny-setning .title-container:hover {
+  filter: opacity(0.35)
 }
 
 .title-container .title {

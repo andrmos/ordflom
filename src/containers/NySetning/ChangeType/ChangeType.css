@@ -10,6 +10,10 @@
   cursor: pointer;
 }
 
+.change-type-button:hover {
+  filter: opacity(0.35)
+}
+
 .button-line {
   background-color: #484848;
   height: 0.2em;
