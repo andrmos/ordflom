@@ -8,6 +8,8 @@
   margin: 1em;
   font-size: 1em;
   cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
 
 .credits-label {

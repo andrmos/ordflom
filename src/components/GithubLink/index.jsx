@@ -4,14 +4,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./GithubLink.css";
 
 const GithubLink = () => (
-  <div className="credits-container">
+  <a
+    className="credits-container"
+    href="https://github.com/andrmos/ordflom"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     <div className="credits-label">Laget av André</div>
     <FontAwesomeIcon
       className="github-icon"
       size="2x"
       icon={["fab", "github"]}
     />
-  </div>
+  </a>
 );
 
 export default GithubLink;
