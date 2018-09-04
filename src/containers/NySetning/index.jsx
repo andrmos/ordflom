@@ -8,6 +8,7 @@ import WordList from "./WordList";
 import FinishedButtons from "./FinishedButtons";
 import SvadaSetning from "./SvadaSetning";
 import ChangeType from "./ChangeType";
+import GithubLink from "../../components/GithubLink";
 
 const NySetning = ({ showFinishedButtons, history }) => (
   <div className="ny-setning">
@@ -21,6 +22,7 @@ const NySetning = ({ showFinishedButtons, history }) => (
     <SvadaSetning />
     <WordList />
     {showFinishedButtons ? <FinishedButtons /> : null}
+    <GithubLink />
   </div>
 );
 
