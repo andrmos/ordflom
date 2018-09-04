@@ -3,3 +3,20 @@
   flex-direction: column;
   max-height: 100%;
 }
+
+.ny-setning .header-container {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.ny-setning .title-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.7em;
+}
+
+.title-container .title {
+  font-size: 3.5em;
+  font-weight: bold;
+}
